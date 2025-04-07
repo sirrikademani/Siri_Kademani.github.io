@@ -31,11 +31,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-  	margin: 0;
-  	padding: 0;
- 	background: url('images/SiriGradWhite.jpg') no-repeat center center fixed;
-  	background-size: cover;
-  	font-family: 'Open Sans', sans-serif;
 }
 
 ol, ul {
