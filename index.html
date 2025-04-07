@@ -33,33 +33,38 @@
 				z-index: 1;
 			}
 			
-		        .logo-style3 a {
-		            text-decoration: none;
-		            color: #fff;
-		            text-shadow: 0 0 5px #fff,
-		                         0 0 10px #fff,
-		                         0 0 20px #0ff,
-		                         0 0 30px #0ff,
-		                         0 0 40px #0ff;
-		            animation: neon 1.5s ease-in-out infinite alternate;
-		        }
-		
-		        @keyframes neon {
-		            from {
-		                text-shadow: 0 0 5px #fff,
-		                             0 0 10px #fff,
-		                             0 0 20px #0ff,
-		                             0 0 30px #0ff,
-		                             0 0 40px #0ff;
-		            }
-		            to {
-		                text-shadow: 0 0 2px #fff,
-		                             0 0 5px #fff,
-		                             0 0 10px #0ff,
-		                             0 0 15px #0ff,
-		                             0 0 20px #0ff;
-		            }
-		        }
+		        #logo a {
+			    text-decoration: none;
+			    color: #333;
+			    padding: 10px 20px;
+			    position: relative;
+			    background: white;
+			    z-index: 1;
+			}
+			
+			#logo a::before {
+			    content: '';
+			    position: absolute;
+			    top: -2px;
+			    left: -2px;
+			    right: -2px;
+			    bottom: -2px;
+			    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b649, #ff6b6b);
+			    background-size: 400%;
+			    z-index: -1;
+			    animation: gradientMove 10s linear infinite;
+			    border-radius: 4px;
+			}
+			
+			@keyframes gradientMove {
+			    0% {
+			        background-position: 0% 50%;
+			    }
+			    100% {
+			        background-position: 400% 50%;
+			    }
+			}
+
 		 </style>
   </head>
   	<body class="is-preload">
@@ -70,7 +75,7 @@
   			<section id="header">
   				<header>
  
-  					<h1 class="logo-style3"><a href="#">Portfolio</a></h1>
+  					<h1 class="logo"><a href="#">Portfolio</a></h1>
   					<p>Data-driven strategist and analytics professional with a passion
   						for leveraging insights to drive strategic decision-making and fuel business growth.</p>
   				</header>
