@@ -6,7 +6,28 @@
   		<meta charset="utf-8" />
   		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   		<link rel="stylesheet" href="assets/css/main.css" />
-  	</head>
+    <style>
+		  	#wrapper::before {
+			  	content: "";
+		  		background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+			  	background-size: cover;
+			  	background-position: center;
+			  	background-repeat: no-repeat;
+			  	background-attachment: fixed;
+			  	opacity: 0.5;
+			  	position: fixed;
+				  top: 0;
+				  left: 0;
+			  	right: 0;
+			  	bottom: 0;
+			  	z-index: -1;
+		 	 }
+     
+			 #wrapper {
+			 	position: relative;
+		 	}
+		 </style>
+  </head>
   	<body class="is-preload">
  
   		<!-- Header -->
