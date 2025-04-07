@@ -32,26 +32,29 @@
 				position: relative;
 				z-index: 1;
 			}
-			
-		        .logo a {
-			  display: inline-block;
-			  position: relative;
-			  overflow: hidden;
-			  animation: revealText 1s ease forwards;
-			}
-			
-			@keyframes revealText {
+
+			@keyframes slideFromLeft {
 			  0% {
-			    width: 0;
+			    transform: translateX(-100%);
 			    opacity: 0;
 			  }
 			  100% {
-			    width: 100%;
+			    transform: translateX(0);
 			    opacity: 1;
 			  }
 			}
 			
-
+			/* Apply animation to the header h1 */
+			#header h1 {
+			  animation: slideFromLeft 1s ease-out forwards;
+			}
+			
+			/* Optional: Add vendor prefixes for better browser support */
+			#header h1 {
+			  -webkit-animation: slideFromLeft 1s ease-out forwards;
+			  -moz-animation: slideFromLeft 1s ease-out forwards;
+			  -ms-animation: slideFromLeft 1s ease-out forwards;
+			}
 		 </style>
   </head>
   	<body class="is-preload">
@@ -62,7 +65,7 @@
   			<section id="header">
   				<header>
  
-  					<h1 class="logo"><a href="#">Portfolio</a></h1>
+  					<h1><a href="#">Portfolio</a></h1>
   					<p>Data-driven strategist and analytics professional with a passion
   						for leveraging insights to drive strategic decision-making and fuel business growth.</p>
   				</header>
