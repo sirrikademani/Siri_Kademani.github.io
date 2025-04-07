@@ -34,32 +34,23 @@
 			}
 			
 		        #logo a {
-			    text-decoration: none;
-			    color: #333;
-			    position: relative;
-			    display: inline-block;
-			    overflow: hidden;
-			    padding: 5px 0;
-			}
-			
-			#logo a::before {
-			    content: 'Portfolio';
-			    position: absolute;
-			    color: #007bff;
-			    width: 100%;
-			    left: 0;
-			    top: 0;
-			    transform: translateX(-100%);
-			    transition: transform 0.3s ease;
-			}
-			
-			#logo a:hover {
-			    color: transparent;
-			}
-			
-			#logo a:hover::before {
-			    transform: translateX(0);
-			}
+		            text-decoration: none;
+		            color: #333;
+		            position: relative;
+		            display: inline-block;
+		            animation: slideIn 1s ease-out;
+		        }
+		
+		        @keyframes slideIn {
+		            0% {
+		                transform: translateX(-100%);
+		                opacity: 0;
+		            }
+		            100% {
+		                transform: translateX(0);
+		                opacity: 1;
+		            }
+        		}
 
 		 </style>
   </head>
