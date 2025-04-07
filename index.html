@@ -33,7 +33,19 @@
 				z-index: 1;
 			}
 			
-		        .logo-style3 a {
+		        .container {
+		            display: flex;
+		            align-items: center;
+		            gap: 30px;  /* Space between items */
+		            padding: 20px;
+		        }
+		
+		        .animated-text {
+		            margin: 0;
+		            white-space: nowrap;  /* Prevents text wrapping */
+		        }
+		
+		        .animated-text a {
 		            text-decoration: none;
 		            color: #fff;
 		            text-shadow: 0 0 5px #fff,
@@ -60,6 +72,10 @@
 		                             0 0 20px #0ff;
 		            }
 		        }
+		
+		        /* Optional: Different colors for each text */
+		        .text1 a { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+		        .text2 a { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; }
 		 </style>
   </head>
   	<body class="is-preload">
@@ -69,8 +85,8 @@
   		<!-- Header -->
   			<section id="header">
   				<header>
- 
-  					<h1 class="logo-style3"><a href="#">Portfolio</a></h1>
+  					<h1 class="Hello!👋"><a href="#">1. Hello!</a></h1>
+        				<h1 class="Welcome to my Portfolio!"><a href="#">2. Welcome to my Portfolio!</a></h1>
   					<p>Data-driven strategist and analytics professional with a passion
   						for leveraging insights to drive strategic decision-making and fuel business growth.</p>
   				</header>
